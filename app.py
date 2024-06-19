@@ -39,7 +39,3 @@ if uploaded_file is not None:
     annotated_image = results[0].plot()  # annotated image with bounding boxes
     st.image(annotated_image, caption='Detected Image', use_column_width=True)
     st.write(results[0].pandas().xyxy)  # detected objects information
-
-# Run the Streamlit app
-if __name__ == '__main__':
-    st.run()
