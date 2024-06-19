@@ -4,7 +4,7 @@ import numpy as np
 from ultralytics import YOLO
 
 # สร้างอินสแตนซ์ของโมเดล YOLOv8
-model = YOLO('mymodelyolo.pt')  # ระบุ path ไปยังโมเดล YOLOv8 ของคุณ
+model = YOLO('model.pt')  # ระบุ path ไปยังโมเดล YOLOv8 ของคุณ
 
 # ฟังก์ชันสำหรับการตรวจจับวัตถุ
 def detect(image):
@@ -34,6 +34,4 @@ if uploaded_file is not None:
 
 # รันแอป Streamlit
 if __name__ == '__main__':
-    st._is_running_with_streamlit = True
-    st.script_run_ctx.get_script_run_ctx().on_exit = lambda: None
     st.run()
