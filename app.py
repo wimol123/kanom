@@ -7,7 +7,7 @@ import numpy as np
 from ultralytics import YOLO
 
 # สร้างอินสแตนซ์ของโมเดล YOLOv8
-model = YOLO('mymodel.pt')  # ระบุ path ไปยังโมเดล YOLOv8 ของคุณ
+model = YOLO('mymodelyolo.pt')  # ระบุ path ไปยังโมเดล YOLOv8 ของคุณ
 
 # ฟังก์ชันสำหรับการตรวจจับวัตถุ
 def detect(image):
