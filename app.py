@@ -31,5 +31,5 @@ if image:
     probability = result[0].probs.data.numpy()
     prediction = np.argmax(probability)
     className = names[prediction]
-    className = class_labels_names.get(int(className))
+    # className = class_labels_names.get(int(className))
     st.write(className)
