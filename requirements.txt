@@ -5,3 +5,4 @@ numpy
 pillow
 ultralytics
 dill
+python-dotenv
