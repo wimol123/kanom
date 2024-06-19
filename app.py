@@ -1,9 +1,6 @@
 import streamlit as st
-import torch
 from PIL import Image
 import numpy as np
-
-# โหลดโมเดลของคุณ
 from ultralytics import YOLO
 
 # สร้างอินสแตนซ์ของโมเดล YOLOv8
