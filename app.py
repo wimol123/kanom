@@ -3,7 +3,6 @@ from PIL import Image
 import numpy as np
 from ultralytics import YOLO
 from dotenv import load_dotenv
-from class_labels_name import class_labels_names
 import os
 
 # Load variables from .env
@@ -14,6 +13,9 @@ model_path = os.getenv('MODEL_PATH')
 
 # Initialize YOLOv8 model with the specified model path
 model = YOLO(model_path)
+class_labels_names_str = os.getenv('CLASS_LABELS_NAMES')
+class_labels_names = json.loads(class_labels_names_str) if class_labels_names_str else {}
+
 
 st.title("HAPPY RAINNY KANOMTHAI..")
 image = st.file_uploader("Choose .jpg pic ...", type=["png", "jpg", "jpeg"])
