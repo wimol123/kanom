@@ -31,7 +31,3 @@ if uploaded_file is not None:
     annotated_image = results[0].plot()  # ได้ภาพที่มีการใส่กรอบตรวจจับแล้ว
     st.image(annotated_image, caption='Detected Image', use_column_width=True)
     st.write(results[0].pandas().xyxy)  # ข้อมูลวัตถุที่ตรวจพบ
-
-# รันแอป Streamlit
-if __name__ == '__main__':
-    st.run()
