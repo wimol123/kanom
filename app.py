@@ -2,20 +2,28 @@ import streamlit as st
 from PIL import Image
 import numpy as np
 from ultralytics import YOLO
+from dotenv import load_dotenv
+import os
 
-# สร้างอินสแตนซ์ของโมเดล YOLOv8
-model = YOLO('model.pt')  # ระบุ path ไปยังโมเดล YOLOv8 ของคุณ
+# Load variables from .env
+load_dotenv()
 
-# ฟังก์ชันสำหรับการตรวจจับวัตถุ
+# Get the path to the model from the environment
+model_path = os.getenv('MODEL_PATH')
+
+# Initialize YOLOv8 model with the specified model path
+model = YOLO(model_path)
+
+# Object detection function
 def detect(image):
     results = model(image)
     return results
 
-# ตั้งค่าหน้าเว็บของ Streamlit
+# Streamlit app setup
 st.title("YOLOv8 Object Detection")
 st.write("Upload an image to detect objects using your custom YOLOv8 model")
 
-# อัพโหลดไฟล์รูปภาพ
+# Upload image
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
@@ -24,10 +32,14 @@ if uploaded_file is not None:
     st.write("")
     st.write("Detecting...")
 
-    # ตรวจจับวัตถุในรูปภาพ
+    # Detect objects in the uploaded image
     results = detect(np.array(image))
     
-    # แสดงผลลัพธ์
-    annotated_image = results[0].plot()  # ได้ภาพที่มีการใส่กรอบตรวจจับแล้ว
+    # Display results
+    annotated_image = results[0].plot()  # annotated image with bounding boxes
     st.image(annotated_image, caption='Detected Image', use_column_width=True)
-    st.write(results[0].pandas().xyxy)  # ข้อมูลวัตถุที่ตรวจพบ
+    st.write(results[0].pandas().xyxy)  # detected objects information
+
+# Run the Streamlit app
+if __name__ == '__main__':
+    st.run()
