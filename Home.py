@@ -4,7 +4,16 @@ from PIL import Image
 import numpy as np
 import cv2
 import random
+import numpy as np
+from dotenv import load_dotenv
+import os
 
+# Load variables from .env
+load_dotenv()
+
+# Get the path to the model from the environment
+model_path = os.getenv('MODEL_PATH')
+model = YOLO(modelpath)
 # Streamlit page configuration
 st.set_page_config(
     page_title="ขนมไทยอะไรเอ่ย??",
@@ -12,10 +21,6 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
-
-# Load the YOLO model
-modelpath = r"C:\Users\LENOVO\Downloads\best.pt"
-model = YOLO(modelpath)
 
 # Display the header image
 st.image("Image/ขนมไทย.jpg")
