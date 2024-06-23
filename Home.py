@@ -22,6 +22,7 @@ st.set_page_config(
 )
 
 # Display the header image
+HeadImg=os.getenv('')
 st.image("Image/ขนมไทย.jpg")
 
 # Page title
