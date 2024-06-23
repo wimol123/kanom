@@ -19,7 +19,7 @@ st.set_page_config(
 )
 
 # Display main image and title
-st.image(image=HEADER_IMG_PATH)
+st.image(image=header_img_path)
 st.title("ขนมกง")
 
 left_co, cent_co, last_co = st.columns(3)
