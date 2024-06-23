@@ -25,12 +25,6 @@ st.set_page_config(
 HeadImg=os.getenv('HEADER_IMG_PATH')
 st.image(HeadImg)
 
-try:
-    img = Image.open(HeadImg)
-    img.show()  # This should display the image using your default image viewer
-except Exception as e:
-    print(f"Error loading image from {head_img_path}: {e}")
-
 # Page title
 st.title("HAPPY RAINNY KANOMTHAI..")
 
