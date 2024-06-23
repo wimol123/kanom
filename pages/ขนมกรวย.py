@@ -3,7 +3,6 @@ import cv2
 import streamlit as st
 from PIL import Image
 import numpy as np
-from class_labels_name import class_labels_names
 
 from dotenv import load_dotenv
 import os
