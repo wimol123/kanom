@@ -13,8 +13,8 @@ model_path = os.getenv('MODEL_PATH')
 
 # Initialize YOLOv8 model with the specified model path
 model = YOLO(model_path)
-class_labels_names_str = os.getenv('CLASS_LABELS_NAMES')
-class_labels_names = json.loads(class_labels_names_str) if class_labels_names_str else {}
+# class_labels_names_str = os.getenv('CLASS_LABELS_NAMES')
+# class_labels_names = json.loads(class_labels_names_str) if class_labels_names_str else {}
 
  st.image(image="ขนมไทย.jpg")
 st.title("HAPPY RAINNY KANOMTHAI..")
