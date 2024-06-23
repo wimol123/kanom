@@ -3,10 +3,9 @@ import cv2
 import streamlit as st
 from PIL import Image
 import numpy as np
-
 from dotenv import load_dotenv
 import os
-import streamlit as st
+
 
 # Load variables from .env
 load_dotenv()
