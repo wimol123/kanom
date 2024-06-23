@@ -15,8 +15,8 @@ load_dotenv()
 # Get the paths from the environment
 header_img_path = os.getenv('HEADER_IMG_PATH')
 background_image_path = os.getenv('BACKGROUND_IMAGE_PATH')
-component_1_path = os.getenv('COMPONENT_1_PATH')
-component_2_path = os.getenv('COMPONENT_2_PATH')
+component_1_path = os.getenv('COMPONENT_2-1_PATH')
+component_2_path = os.getenv('COMPONENT_2-2_PATH')
 
 # Set page configuration
 st.set_page_config(
