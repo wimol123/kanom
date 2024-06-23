@@ -12,7 +12,7 @@ load_dotenv()
 
 # Get the path to the model from the environment
 model_path = os.getenv('MODEL_PATH')
-model = YOLO(modelpath)
+model = YOLO(model_path)
 # Streamlit page configuration
 st.set_page_config(
     page_title="ขนมไทยอะไรเอ่ย??",
