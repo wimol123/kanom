@@ -22,8 +22,8 @@ st.set_page_config(
 )
 
 # Display the header image
-HeadImg=os.getenv('')
-st.image("Image/ขนมไทย.jpg")
+HeadImg=os.getenv('HEADER_IMG_PATH')
+st.image(HeadImg)
 
 # Page title
 st.title("HAPPY RAINNY KANOMTHAI..")
