@@ -25,10 +25,8 @@ st.set_page_config(
 )
 
 # Display main image and title
-st.image(image="header_img_path")
-# Display main image and title
-st.image(image=main_image_path)
-st.title("ขนมกง")
+st.image(image=header_img_path)
+st.title("ขนมกรวย")
 
 # Display background image and text
 left_co, cent_co, last_co = st.columns(3)
