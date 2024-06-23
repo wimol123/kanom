@@ -16,7 +16,7 @@ model = YOLO(model_path)
 class_labels_names_str = os.getenv('CLASS_LABELS_NAMES')
 class_labels_names = json.loads(class_labels_names_str) if class_labels_names_str else {}
 
- st.image(image=image)
+ st.image(image="ขนมไทย.jpg")
 st.title("HAPPY RAINNY KANOMTHAI..")
 image = st.file_uploader("Choose .jpg pic ...", type=["png", "jpg", "jpeg"])
 if image:
