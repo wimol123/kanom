@@ -6,9 +6,9 @@ import os
 load_dotenv()
 # Get the paths from the environment
 header_img_path = os.getenv('HEADER_IMG_PATH')
-COMPONENT_KhanomKonThua1_PATH = os.getenv('COMPONENT_KhanomKonThua1_PATH')
-COMPONENT_KhanomKonThua2_PATH = os.getenv('COMPONENT_KhanomKonThua2_PATH')
-COMPONENT_KhanomKonThua3_PATH = os.getenv('COMPONENT_KhanomKonThua3_PATH')
+COMPONENT1 = os.getenv('COMPONENT_KhanomKonThua1_PATH')
+COMPONENT2 = os.getenv('COMPONENT_KhanomKonThua2_PATH')
+COMPONENT3 = os.getenv('COMPONENT_KhanomKonThua3_PATH')
 
 # Set page configuration
 st.set_page_config(
@@ -25,7 +25,7 @@ st.title("ขนมกง")
 left_co, cent_co, last_co = st.columns(3)
 st.title("ความเป็นมา")
 with cent_co:
-    st.image(image=COMPONENT_KhanomKonThua1_PATH, width=500)
+    st.image(image=COMPONENT1 , width=500)
 
 
 multi = """
@@ -40,10 +40,10 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.header("ส่วนประกอบ")
-    st.image(image=COMPONENT_KhanomKonThua2_PATH)
+    st.image(image=COMPONENT2)
 
 with col2:
     st.header("วิธีทำ")
-    st.image(image=COMPONENT_KhanomKonThua3_PATH)
+    st.image(image=COMPONENT3)
 
 st.page_link("Home.py", label="Home", icon="↩️")
